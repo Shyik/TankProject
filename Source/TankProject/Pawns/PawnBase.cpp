@@ -5,6 +5,7 @@
 
 #include "MovieSceneSequenceID.h"
 #include "Components/CapsuleComponent.h"
+#include "TankProject/Actors/ProjectileBase.h"
 
 // Sets default values
 APawnBase::APawnBase()
@@ -24,6 +25,32 @@ APawnBase::APawnBase()
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Projectile Spawn Point"));
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
 }
+
+void APawnBase::Fire()
+{
+	//UE_LOG(LogTemp, Warning, TEXT("FIRE"))
+	if(ProjectileClass)
+	{
+		FVector SpawnLocation = ProjectileSpawnPoint->GetComponentLocation();
+		FRotator SpawnRotation = ProjectileSpawnPoint->GetComponentRotation();
+
+		AProjectileBase* TempProjectile = GetWorld()->SpawnActor<AProjectileBase>(ProjectileClass, SpawnLocation, SpawnRotation);
+	}
+}
+
+void APawnBase::HandleDestruction()
+{
+	
+}
+
+void APawnBase::RotateTurretFunction(FVector LookAtTarget)
+{
+	FVector LookAtTargetCleand = FVector(LookAtTarget.X, LookAtTarget.Y, TurretMesh->GetComponentLocation().Z);
+	FVector StartLocation = TurretMesh->GetComponentLocation();
+	FRotator TurretRotation = FVector(LookAtTargetCleand - StartLocation).Rotation();
+	TurretMesh->SetWorldRotation(TurretRotation);
+}
+
 
 // Called when the game starts or when spawned
 void APawnBase::BeginPlay()

@@ -4,10 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-
 #include "PawnBase.generated.h"
 
 class UCapsuleComponent;
+class AProjectileBase;
 
 
 UCLASS()
@@ -18,6 +18,10 @@ class TANKPROJECT_API APawnBase : public APawn
 public:
 	// Sets default values for this pawn's properties
 	APawnBase();
+
+	void RotateTurretFunction(FVector LookAtTarget);
+	void Fire();
+	virtual void HandleDestruction();
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess= true))
@@ -32,15 +36,8 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess= true))
 	USceneComponent* ProjectileSpawnPoint;
 
-	/*
-	 
-	void Fire();
-	void Rotate();
-	void Destroy();
-	
-	float HP = 10;
-
-	*/
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Projectile Type", meta = (AllowPrivateAccess= true))
+	TSubclassOf<AProjectileBase> ProjectileClass;
 	
 protected:
 	// Called when the game starts or when spawned
@@ -52,5 +49,7 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
+
 
 };

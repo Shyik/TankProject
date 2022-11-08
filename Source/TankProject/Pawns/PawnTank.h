@@ -20,6 +20,8 @@ public:
     // Sets default values for this pawn's properties
    	APawnTank();
 private:
+	APlayerController* PlayerControllerRef;
+	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess= true))
 	UCameraComponent* Camera;
 
