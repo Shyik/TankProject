@@ -35,12 +35,13 @@ void APawnBase::Fire()
 		FRotator SpawnRotation = ProjectileSpawnPoint->GetComponentRotation();
 
 		AProjectileBase* TempProjectile = GetWorld()->SpawnActor<AProjectileBase>(ProjectileClass, SpawnLocation, SpawnRotation);
+		TempProjectile->SetOwner(this);
 	}
 }
 
 void APawnBase::HandleDestruction()
 {
-	
+	//Destroy();
 }
 
 void APawnBase::RotateTurretFunction(FVector LookAtTarget)

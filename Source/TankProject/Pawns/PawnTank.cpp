@@ -19,6 +19,11 @@ APawnTank::APawnTank()
 	Camera->SetupAttachment(SpringArm);
 }
 
+bool APawnTank::IsPlayerAlive()
+{
+	return bIsPlayerAlive;
+}
+
 
 // Called when the game starts or when spawned
 void APawnTank::BeginPlay()
@@ -26,6 +31,15 @@ void APawnTank::BeginPlay()
 	Super::BeginPlay();
 
 	PlayerControllerRef = Cast<APlayerController>(GetController());
+}
+
+void APawnTank::HandleDestruction()
+{
+	Super::HandleDestruction();
+	bIsPlayerAlive = false;
+
+	SetActorHiddenInGame(true);
+	SetActorTickEnabled(false);
 }
 
 // Called every frame

@@ -20,6 +20,8 @@ public:
     // Sets default values for this pawn's properties
    	APawnTank();
 private:
+	bool bIsPlayerAlive = true;
+
 	APlayerController* PlayerControllerRef;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess= true))
@@ -46,6 +48,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -53,4 +56,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	virtual void HandleDestruction() override;
+
+	bool IsPlayerAlive();
 };

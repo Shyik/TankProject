@@ -28,7 +28,7 @@ void APawnTurret::CheckFireCondition()
 {
 	UE_LOG(LogTemp, Warning, TEXT("CHECK KLAPPT!"))
 
-	if (!PlayerPawn)
+	if (!PlayerPawn || !PlayerPawn->IsPlayerAlive())
 	{
 		return;
 	}

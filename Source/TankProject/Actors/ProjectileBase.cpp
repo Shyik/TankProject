@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "Kismet/GameplayStatics.h"
 #include "ProjectileBase.h"
 
 // Sets default values
@@ -17,6 +17,8 @@ AProjectileBase::AProjectileBase()
 	ProjectileMovementComponent->MaxSpeed = MovementSpeed;
 
 	InitialLifeSpan = 3.f;
+	
+	ProjectileMesh->OnComponentHit.AddDynamic(this, &AProjectileBase::OnHit);
 }
 
 // Called when the game starts or when spawned
@@ -25,6 +27,23 @@ void AProjectileBase::BeginPlay()
 	Super::BeginPlay();
 	
 }
+
+void AProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	AActor* MyOwner = GetOwner();
+	if(!MyOwner)
+	{
+		return;
+	}
+
+	if(OtherActor && OtherActor != this && OtherActor != MyOwner)
+	{
+		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyOwner->GetInstigatorController(), this , DamageType);
+	}
+
+	Destroy();
+}
+
 
 // Called every frame
 void AProjectileBase::Tick(float DeltaTime)
