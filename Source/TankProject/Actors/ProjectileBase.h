@@ -8,6 +8,7 @@
 #include "ProjectileBase.generated.h"
 
 class UNiagaraComponent;
+class UMatineeCameraShake;
 
 UCLASS()
 class TANKPROJECT_API AProjectileBase : public AActor
@@ -38,6 +39,16 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "VFX")
 	UParticleSystem* HitParticle;
+
+	UPROPERTY(EditAnywhere, Category = "VFX")
+	TSubclassOf<UMatineeCameraShake> HitCameraShake;
+	
+	UPROPERTY(EditAnywhere, Category = "SFX")
+	USoundBase* HitSound;
+	
+	UPROPERTY(EditAnywhere, Category = "SFX")
+	USoundBase* LaunchSound;
+
 	
 protected:
 	// Called when the game starts or when spawned
@@ -47,11 +58,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditAnywhere, Category = "SFX")
-	USoundBase* HitSound;
-	
-	UPROPERTY(EditAnywhere, Category = "SFX")
-	USoundBase* LaunchSound;
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component", meta = (AllowPrivateAccess = true))

@@ -52,6 +52,8 @@ void APawnBase::Fire()
 void APawnBase::HandleDestruction()
 {
 	UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticle, GetActorLocation(), FRotator(0.f,0.f,0.f), VFXScale);
+	GetWorld()->GetFirstPlayerController()->ClientStartCameraShake(ExplosionCameraShake);
+
 	//Destroy();
 }
 

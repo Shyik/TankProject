@@ -2,14 +2,17 @@
 
 #pragma once
 
+#include "Camera/CameraShake.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "TankProject/Component/HealthComponent.h"
 #include "PawnBase.generated.h"
 
+
 class UCapsuleComponent;
 class AProjectileBase;
 class UHealthComponent;
+class UMatineeCameraShake;
 
 UCLASS()
 class TANKPROJECT_API APawnBase : public APawn
@@ -53,7 +56,9 @@ public:
 	
 	UPROPERTY(EditAnywhere, Category = "VFX")
 	FVector VFXScale = FVector(8.0f,8.0f,8.0f);
-	
+
+	UPROPERTY(EditAnywhere, Category = "VFX")
+	TSubclassOf<UMatineeCameraShake> ExplosionCameraShake;
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

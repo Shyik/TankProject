@@ -1,0 +1,128 @@
+Begin Object Class=/Script/Engine.Material Name="M_West_Tank_M1A1Abrams_Tracks"
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_2"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureCoordinate Name="MaterialExpressionTextureCoordinate_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionComment Name="MaterialExpressionComment_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAppendVector Name="MaterialExpressionAppendVector_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_0"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_2"
+      Texture=Texture2D'"/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_Track_ARM.T_West_Tank_M1A1Abrams_Track_ARM"'
+      SamplerType=SAMPLERTYPE_LinearColor
+      MaterialExpressionEditorX=-628
+      MaterialExpressionEditorY=177
+      MaterialExpressionGuid=6A1A219B41D3B4C9C0675F98B2F19C74
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_1"
+      Texture=Texture2D'"/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_Track_N.T_West_Tank_M1A1Abrams_Track_N"'
+      SamplerType=SAMPLERTYPE_Normal
+      MaterialExpressionEditorX=-624
+      MaterialExpressionEditorY=416
+      MaterialExpressionGuid=7E123BC644859D674678909BBDF20937
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_0"
+      Texture=Texture2D'"/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_Track_D.T_West_Tank_M1A1Abrams_Track_D"'
+      MaterialExpressionEditorX=-624
+      MaterialExpressionEditorY=-64
+      MaterialExpressionGuid=0465BB0542EBDDAF94323F96C54F70A2
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureCoordinate_0"
+      MaterialExpressionEditorX=-416
+      MaterialExpressionEditorY=720
+      MaterialExpressionGuid=BD06B28A457EEC6894A4E9993766FE48
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_1"
+      ParameterName="OffsetV"
+      ExpressionGUID=141F662C43A9914A6C230DADEE829E41
+      MaterialExpressionEditorX=-560
+      MaterialExpressionEditorY=864
+      MaterialExpressionGuid=7A04A45E4CC1FDC0C4FC51A3CED5C9B3
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_0"
+      ParameterName="OffsetU"
+      ExpressionGUID=A08367E746042D57EB171AB95707441C
+      MaterialExpressionEditorX=-560
+      MaterialExpressionEditorY=768
+      MaterialExpressionGuid=7A04A45E4CC1FDC0C4FC51A3CED5C9B3
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   Begin Object Name="MaterialExpressionComment_0"
+      SizeX=478
+      SizeY=316
+      Text="Custom UV offset used for tracks movement"
+      MaterialExpressionEditorX=-624
+      MaterialExpressionEditorY=656
+      MaterialExpressionGuid=356E28C842697E6E6F1C169905FAEEC0
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   Begin Object Name="MaterialExpressionAppendVector_0"
+      A=(Expression=MaterialExpressionScalarParameter'"M_West_Tank_M1A1Abrams_Tracks:MaterialExpressionScalarParameter_0"')
+      B=(Expression=MaterialExpressionScalarParameter'"M_West_Tank_M1A1Abrams_Tracks:MaterialExpressionScalarParameter_1"')
+      MaterialExpressionEditorX=-416
+      MaterialExpressionEditorY=784
+      MaterialExpressionGuid=0BBBE4C4422F94EB066195998EFBA1C3
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   Begin Object Name="MaterialExpressionAdd_0"
+      A=(Expression=MaterialExpressionTextureCoordinate'"M_West_Tank_M1A1Abrams_Tracks:MaterialExpressionTextureCoordinate_0"')
+      B=(Expression=MaterialExpressionAppendVector'"M_West_Tank_M1A1Abrams_Tracks:MaterialExpressionAppendVector_0"')
+      MaterialExpressionEditorX=-256
+      MaterialExpressionEditorY=720
+      MaterialExpressionGuid=5E4599824C852B8B5DBAD09333B0EEC3
+      Material=Material'"M_West_Tank_M1A1Abrams_Tracks"'
+   End Object
+   BaseColor=(Expression=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_0"',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+   Metallic=(Expression=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_2"',OutputIndex=3,Mask=1,MaskB=1)
+   Specular=(OutputIndex=3,Mask=1,MaskB=1)
+   Roughness=(Expression=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_2"',OutputIndex=2,Mask=1,MaskG=1)
+   Normal=(Expression=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_1"',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+   Opacity=(Expression=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_0"',OutputIndex=4,Mask=1,MaskA=1)
+   OpacityMask=(Expression=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_0"',OutputIndex=4,Mask=1,MaskA=1)
+   BlendMode=BLEND_Masked
+   AmbientOcclusion=(Expression=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_2"',OutputIndex=1,Mask=1,MaskR=1)
+   CustomizedUVs(0)=(Expression=MaterialExpressionAdd'"MaterialExpressionAdd_0"')
+   NumCustomizedUVs=1
+   bUsedWithSkeletalMesh=True
+   Expressions(0)=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_0"'
+   Expressions(1)=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_2"'
+   Expressions(2)=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_1"'
+   Expressions(3)=MaterialExpressionAdd'"MaterialExpressionAdd_0"'
+   Expressions(4)=MaterialExpressionTextureCoordinate'"MaterialExpressionTextureCoordinate_0"'
+   Expressions(5)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_0"'
+   Expressions(6)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_1"'
+   Expressions(7)=MaterialExpressionAppendVector'"MaterialExpressionAppendVector_0"'
+   EditorComments(0)=MaterialExpressionComment'"MaterialExpressionComment_0"'
+   ParameterGroupData(0)=(GroupName="None")
+   ParameterGroupData(1)=(GroupName="None")
+   StateId=D5B70CB244F4B5F0ABFD5D8BDA8282D3
+   ReferencedTextureGuids(0)=E6A2AEFA44A94712A8CFF68BEF767C55
+   ReferencedTextureGuids(1)=469354064CC0146A2CEC5EAADD3608D5
+   ReferencedTextureGuids(2)=3193521F41DE72E0A62BB093B260B012
+   TextureStreamingDataVersion=1
+   TextureStreamingData(0)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_West_Tank_M1A1Abrams_Track_ARM",TextureReference="/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_Track_ARM.T_West_Tank_M1A1Abrams_Track_ARM")
+   TextureStreamingData(1)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_West_Tank_M1A1Abrams_Track_D",TextureReference="/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_Track_D.T_West_Tank_M1A1Abrams_Track_D")
+   TextureStreamingData(2)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_West_Tank_M1A1Abrams_Track_N",TextureReference="/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_Track_N.T_West_Tank_M1A1Abrams_Track_N")
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'"SceneThumbnailInfoWithPrimitive_0"'
+   ParameterOverviewExpansion=(("-12Global", True))
+   LightingGuid=914D4B8E432502423A979D85662BEF0B
+End Object

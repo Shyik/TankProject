@@ -1,0 +1,29 @@
+Begin Object Class=/Script/Engine.MaterialInstanceConstant Name="MI_West_Tank_M1A1Abrams"
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   ParameterStateId=03BD580B43F28375C713C9AF710FC803
+   Parent=Material'"/Game/VigilanteContent/Shared/Materials/M_Master_Main.M_Master_Main"'
+   ScalarParameterValues(0)=(ParameterInfo=(Name="EmissiveMultiplier"),ParameterValue=30.000000,ExpressionGUID=E214B2964B9D254541AB55A4B266F9D9)
+   ScalarParameterValues(1)=(ParameterInfo=(Name="RoughnessMultiplier"),ParameterValue=1.000000,ExpressionGUID=75EF959D49D912EF9F21E9AD7700A397)
+   ScalarParameterValues(2)=(ParameterInfo=(Name="SkinType"),ExpressionGUID=6EC067DB4E67E6E368ECFCB692B4E043)
+   ScalarParameterValues(3)=(ParameterInfo=(Name="RefractionDepthBias"))
+   TextureParameterValues(0)=(ParameterInfo=(Name="ARM"),ParameterValue=Texture2D'"/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_ARM.T_West_Tank_M1A1Abrams_ARM"',ExpressionGUID=BDBB5D0B4A3E6DD4E78CFCB64C7DA89D)
+   TextureParameterValues(1)=(ParameterInfo=(Name="DiffuseSkin1"),ParameterValue=Texture2D'"/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_D_Desert.T_West_Tank_M1A1Abrams_D_Desert"',ExpressionGUID=6ED1360A455A1E7B1F1D1191930F37B7)
+   TextureParameterValues(2)=(ParameterInfo=(Name="DiffuseSkin2"),ParameterValue=Texture2D'"/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_D_Forest.T_West_Tank_M1A1Abrams_D_Forest"',ExpressionGUID=CCD05F6B470E8C29F2DA23B798C15864)
+   TextureParameterValues(3)=(ParameterInfo=(Name="Emissive"),ParameterValue=Texture2D'"/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_E.T_West_Tank_M1A1Abrams_E"',ExpressionGUID=6C3BB7B9406630FDCA48A99171A9DDC3)
+   TextureParameterValues(4)=(ParameterInfo=(Name="Normal"),ParameterValue=Texture2D'"/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_N.T_West_Tank_M1A1Abrams_N"',ExpressionGUID=A6687DA24363D56093B973A97EBA141C)
+   BasePropertyOverrides=(BlendMode=BLEND_Masked,OpacityMaskClipValue=0.333300)
+   ReferencedTextureGuids(0)=75EC2F50477C3920E4D35FBFA07D24F1
+   ReferencedTextureGuids(1)=080925C84AD67E07FB0FA684108081DF
+   ReferencedTextureGuids(2)=F9B4653A489B7F53A217B985FE3DEB59
+   ReferencedTextureGuids(3)=CCD710C44D12AAAC9F5EF59659E6D5FA
+   ReferencedTextureGuids(4)=0B520A344E70BC7AC75B8AA74B534739
+   TextureStreamingDataVersion=1
+   TextureStreamingData(0)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_West_Tank_M1A1Abrams_ARM",TextureReference="/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_ARM.T_West_Tank_M1A1Abrams_ARM")
+   TextureStreamingData(1)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_West_Tank_M1A1Abrams_D_Forest",TextureReference="/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_D_Forest.T_West_Tank_M1A1Abrams_D_Forest")
+   TextureStreamingData(2)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_West_Tank_M1A1Abrams_N",TextureReference="/Game/VigilanteContent/Vehicles/West_Tank_M1A1Abrams/Materials/Textures/T_West_Tank_M1A1Abrams_N.T_West_Tank_M1A1Abrams_N")
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'"SceneThumbnailInfoWithPrimitive_0"'
+   LightingGuid=BB2C38804C01BEFAE686B7BA2888E291
+End Object
