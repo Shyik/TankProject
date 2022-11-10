@@ -7,6 +7,8 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "ProjectileBase.generated.h"
 
+class UNiagaraComponent;
+
 UCLASS()
 class TANKPROJECT_API AProjectileBase : public AActor
 {
@@ -34,6 +36,8 @@ public:
 	UFUNCTION()     
     void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	UPROPERTY(EditAnywhere, Category = "VFX")
+	UParticleSystem* HitParticle;
 	
 protected:
 	// Called when the game starts or when spawned
@@ -42,5 +46,15 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(EditAnywhere, Category = "SFX")
+	USoundBase* HitSound;
+	
+	UPROPERTY(EditAnywhere, Category = "SFX")
+	USoundBase* LaunchSound;
+
+private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component", meta = (AllowPrivateAccess = true))
+	UNiagaraComponent* ProjectileTrail;
 
 };

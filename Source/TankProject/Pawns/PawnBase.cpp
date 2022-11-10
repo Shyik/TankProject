@@ -6,6 +6,14 @@
 #include "MovieSceneSequenceID.h"
 #include "Components/CapsuleComponent.h"
 #include "TankProject/Actors/ProjectileBase.h"
+#include "TankProject/Component/HealthComponent.h"
+#include "Kismet/GameplayStatics.h"
+
+// Called when the game starts or when spawned
+void APawnBase::BeginPlay()
+{
+	Super::BeginPlay();
+}
 
 // Sets default values
 APawnBase::APawnBase()
@@ -24,6 +32,8 @@ APawnBase::APawnBase()
 
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Projectile Spawn Point"));
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
+
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));
 }
 
 void APawnBase::Fire()
@@ -41,6 +51,7 @@ void APawnBase::Fire()
 
 void APawnBase::HandleDestruction()
 {
+	UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticle, GetActorLocation(), FRotator(0.f,0.f,0.f), VFXScale);
 	//Destroy();
 }
 
@@ -50,14 +61,6 @@ void APawnBase::RotateTurretFunction(FVector LookAtTarget)
 	FVector StartLocation = TurretMesh->GetComponentLocation();
 	FRotator TurretRotation = FVector(LookAtTargetCleand - StartLocation).Rotation();
 	TurretMesh->SetWorldRotation(TurretRotation);
-}
-
-
-// Called when the game starts or when spawned
-void APawnBase::BeginPlay()
-{
-	Super::BeginPlay();
-	
 }
 
 // Called every frame

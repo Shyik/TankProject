@@ -4,11 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "TankProject/Component/HealthComponent.h"
 #include "PawnBase.generated.h"
 
 class UCapsuleComponent;
 class AProjectileBase;
-
+class UHealthComponent;
 
 UCLASS()
 class TANKPROJECT_API APawnBase : public APawn
@@ -38,14 +39,26 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Projectile Type", meta = (AllowPrivateAccess= true))
 	TSubclassOf<AProjectileBase> ProjectileClass;
-	
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Projectile Type", meta = (AllowPrivateAccess= true))
+	UHealthComponent* HealthComponent;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	UPROPERTY(EditAnywhere, Category = "VFX")
+	UParticleSystem* DeathParticle;
+	
+	UPROPERTY(EditAnywhere, Category = "VFX")
+	FVector VFXScale = FVector(8.0f,8.0f,8.0f);
+	
+	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
