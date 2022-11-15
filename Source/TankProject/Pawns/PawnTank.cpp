@@ -4,6 +4,7 @@
 #include "PawnTank.h"
 
 #include "Camera/CameraComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "GameFramework/SpringArmComponent.h"
 
 
@@ -40,6 +41,13 @@ void APawnTank::HandleDestruction()
 
 	SetActorHiddenInGame(true);
 	SetActorTickEnabled(false);
+
+	//PlayerDeathSound
+	if(PlayerDeathSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, PlayerDeathSound, GetActorLocation());
+	}
+	
 }
 
 // Called every frame

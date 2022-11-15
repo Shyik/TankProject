@@ -1,0 +1,11 @@
+maybes:
+	health packs
+	power ups:
+		faster firerate/movespeed/dmg buff
+		other projectiles: travel speed, range etc.
+	
+
+todo:
+	multiple levels
+	fix soundsystem 
+	camera rotation

@@ -59,6 +59,7 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "VFX")
 	TSubclassOf<UMatineeCameraShake> ExplosionCameraShake;
+
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

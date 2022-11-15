@@ -57,6 +57,10 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	virtual void HandleDestruction() override;
+	
+	UPROPERTY(EditAnywhere, Category = "SFX")
+	USoundBase* PlayerDeathSound;
 
+	
 	bool IsPlayerAlive();
 };

@@ -27,6 +27,12 @@ void APawnTurret::HandleDestruction()
 {
 	Super::HandleDestruction();
 	Destroy();
+	
+	//Death Sound
+	if(TurretDeathSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, TurretDeathSound, GetActorLocation());
+	}
 }
 
 
