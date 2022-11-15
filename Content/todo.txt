@@ -1,11 +1,13 @@
 maybes:
-	health packs
+	health packs (0%)
 	power ups:
 		faster firerate/movespeed/dmg buff
-		other projectiles: travel speed, range etc.
-	
+		other projectiles: travel speed, range etc. (0%)	
 
 todo:
-	multiple levels
-	fix soundsystem !
+	multiple levels (20%)
+	MAINMENUSTART (5%)
+
+	
+	fix soundsystem (!)
 	camera rotation (?)

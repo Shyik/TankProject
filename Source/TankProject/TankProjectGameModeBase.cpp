@@ -52,6 +52,7 @@ void ATankProjectGameModeBase::HandleGameOver(bool PlayerWon)
 	if(PlayerControllerBaseRef)
 	{
 		PlayerControllerBaseRef->SetPlayerEnableState(false);
+		PlayerControllerBaseRef->GetPawn()->SetActorTickEnabled(false);
 	}
 }
 
