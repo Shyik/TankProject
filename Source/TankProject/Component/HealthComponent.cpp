@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "HealthComponent.h"
 #include "TankProject/TankProjectGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
-#include "HealthComponent.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent()
