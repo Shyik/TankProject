@@ -6,7 +6,7 @@ maybes:
 
 todo:
 	multiple levels (20%)
-	MAINMENUSTART (5%)
+	MAINMENUSTART (100%)
 
 	
 	fix soundsystem (!)
